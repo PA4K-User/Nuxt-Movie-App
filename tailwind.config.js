@@ -5,8 +5,9 @@ module.exports = {
     extend: {
       colors: {
         "netflix-red": "#e50914",
+        "netflix-dark": "#141414",
         "netflix-light-gray": "#757575",
-        "netflix-light-dark": "#141414",
+        "netflix-dark-light": "#1f1f1f",
       },
     },
     fontFamily: {

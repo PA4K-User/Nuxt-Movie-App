@@ -11,11 +11,11 @@
     <div class="container mx-auto px-8 pb-32 z-10">
       <div class="max-w-2xl">
         <!-- Title with rating badge -->
-        <div class="flex items-center gap-4 mb-3">
-          <h1 class="text-5xl font-bold text-white" data-aos="fade-right">
+        <div class="md:flex items-center gap-4 mb-3">
+          <h1 class="text-5xl font-bold text-white mb-3" data-aos="fade-right">
             {{ featured.title }}
           </h1>
-          <div class="flex items-center bg-red-600 px-3 py-1 rounded-md">
+          <div class="flex items-center bg-red-600 px-3 py-1 rounded-md max-w-20">
             <Icon icon="mdi:star" class="text-yellow-300 mr-1" width="18" />
             <span class="font-bold">{{ featured.rating }}</span>
           </div>
