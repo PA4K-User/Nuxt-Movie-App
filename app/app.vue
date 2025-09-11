@@ -5,7 +5,7 @@
     <AppHeader />
     <AppHero :featured="featuredContent" />
     <div
-      class="relative z-10 -mt-2 pb-20 space-y-16 max-w-screen overflow-x-hidden"
+      class="relative z-10 -mt-32 pb-20 space-y-16 max-w-screen overflow-x-hidden"
     >
       <SpotlightCarousel :items="spotlightCarousel" data-aos="fade-up" />
       <MovieRow
@@ -13,6 +13,12 @@
         :movies="movieRows[0].movies"
         :size="movieRows[0].size"
         :type="movieRows[0].type"
+        data-aos="fade-up"
+      />
+      <FeaturedCategory
+        title="New & Popular"
+        :featured="movieRows[1].movies[0]"
+        :items="movieRows[1].movies.slice(1, 5)"
         data-aos="fade-up"
       />
     </div>
@@ -26,6 +32,7 @@ import AppHeader from "./components/header.vue";
 import AppHero from "./components/hero.vue";
 import SpotlightCarousel from "./components/spotlightCarousel.vue";
 import MovieRow from "./components/movieRow.vue";
+import FeaturedCategory from "./components/featuredCategory.vue";
 
 const featuredContent = ref({
   title: "Stranger Things",
@@ -66,14 +73,26 @@ const movieRows = ref([
   {
     title: "Continue Watching",
     movies: [
-      { id: 1, title: "Bloodshot", imageUrl: "/movies/movie1.jpg" },
-      { id: 2, title: "Money Heist", imageUrl: "/movies/movie2.jpg" },
-      { id: 3, title: "Dark", imageUrl: "/movies/movie3.jpg" },
-      { id: 4, title: "Queen Gambit", imageUrl: "/movies/movie4.jpg" },
-      { id: 5, title: "Breaking Bad", imageUrl: "/movies/movie5.jpg" },
+      { id: 1, title: "Bloodshot", imageUrl: "/movies/movie1.jpg", rating: 8.8},
+      { id: 2, title: "Money Heist", imageUrl: "/movies/movie2.jpg", rating: 8.7},
+      { id: 3, title: "Dark", imageUrl: "/movies/movie3.jpg", rating: 8.5},
+      { id: 4, title: "Queen Gambit", imageUrl: "/movies/movie4.jpg", rating: 7.9},
+      { id: 5, title: "Breaking Bad", imageUrl: "/movies/movie5.jpg", rating: 8.4},
     ],
     size: "medium",
-    type: "progress"
+    type: "progress",
+  },
+  {
+    title: "Popular On Netflix",
+    movies: [
+      { id: 6, title: "The Last of Us", imageUrl: "/movies/movie6.jpg", rating: 8.7},
+      { id: 7, title: "Wednesday", imageUrl: "/movies/movie7.jpg", rating: 9.0},
+      { id: 8, title: "House of the Dragon", imageUrl: "/movies/movie8.jpg", rating: 8.0},
+      { id: 9, title: "The Sandman", imageUrl: "/movies/movie9.jpg", rating: 8.5},
+      { id: 10, title: "Andor", imageUrl: "/movies/movie10.jpg", rating: 7.5},
+    ],
+    size: "large",
+    type: "rating",
   }
 ]);
 
