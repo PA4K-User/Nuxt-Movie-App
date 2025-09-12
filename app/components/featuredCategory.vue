@@ -16,7 +16,7 @@
           <img
             :src="featured.imageUrl"
             :alt="featured.title"
-            class="featured-image w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            class="featured-image w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
             loading="lazy"
           />
           <div

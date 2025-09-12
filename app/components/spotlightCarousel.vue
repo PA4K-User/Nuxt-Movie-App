@@ -33,7 +33,16 @@ defineProps({
 });
 </script>
 <style scoped>
+/* Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;    /* Firefox */
+}
+
+/* Chrome, Safari, Opera */
 .scrollbar-hide::-webkit-scrollbar {
-  display: none;
+  height: 0; /* ซ่อน horizontal scrollbar */
+  width: 0;  /* ซ่อน vertical scrollbar (กันเหนียว) */
+  background: transparent;
 }
 </style>
