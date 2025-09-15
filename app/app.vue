@@ -59,7 +59,7 @@ const featuredContent = ref({
   title: "Stranger Things",
   description: `When a young boy vanishes,a small town oncovers a mystery involving secret experiments,
   terrifying supernatural forces and one strange little girl.`,
-  imageUrl: "/hero.jpg",
+  imageUrl: "/bg_image.jpg",
   genres: ["Sci-Fi", "Horror", "Drama"],
   year: 2016,
   seasons: 4,
