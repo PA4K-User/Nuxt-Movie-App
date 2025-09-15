@@ -45,6 +45,16 @@ import FeaturedCategory from "./components/featuredCategory.vue";
 import GenreGrid from "./components/genreGrid.vue";
 import AppFooter from "./components/footer.vue";
 
+useHead({
+  title: 'Netflix-Clone',
+  meta: [
+    { name: 'description', content: 'This is Movie-app website' }
+  ],
+  link: [
+    { rel: 'icon', type: 'image/png', href: '/favicon.png' }
+  ]
+});
+
 const featuredContent = ref({
   title: "Stranger Things",
   description: `When a young boy vanishes,a small town oncovers a mystery involving secret experiments,
